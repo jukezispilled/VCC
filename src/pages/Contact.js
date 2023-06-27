@@ -6,7 +6,7 @@ import axios from 'axios';
 const Contact = () => {
   const handleSubmit = async (values, actions) => {
     try {
-      await axios.post('http://localhost:3001/users/contact', values );
+      await axios.post('/users/contact', values );
 
       console.log('Email sent successfully!');
       actions.setSubmitting(false);
