@@ -32,6 +32,6 @@ app.use(cors());
 app.use(json());
 
 // Routes
-app.use('/users/', router);
+app.use('/users', router);
 
 export const handler = serverless(app);
