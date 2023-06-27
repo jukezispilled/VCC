@@ -36,6 +36,7 @@
     "react-spring": "",
     "react-ticker": "",
     "react-transition-group": "",
+    "serverless-http": "^3.2.0",
     "web-vitals": "",
     "yup": ""
   },

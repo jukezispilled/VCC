@@ -3,6 +3,7 @@ import { json } from 'express';
 import { connect } from 'mongoose';
 import userRoutes from './routes/userRoutes.js';
 import cors from 'cors';
+import serverless from 'serverless-http';
 
 const app = express();
 const port = 3001;
@@ -33,3 +34,5 @@ app.use(json());
 
 // Routes
 app.use('/users', userRoutes);
+
+export const handler = serverless(app);

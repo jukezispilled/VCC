@@ -36,7 +36,7 @@ router.post('/contact', async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'jax46500@gmail.com',
-        pass: emailPass,
+        pass: 'uqdjdatfyjqzkaoo',
       },
     });    
 
@@ -73,7 +73,7 @@ router.post('/apply', upload.single('resume'), async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'jax46500@gmail.com',
-        pass: 'emailPass',
+        pass: 'uqdjdatfyjqzkaoo',
       },
     });    
 
