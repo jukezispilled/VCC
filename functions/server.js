@@ -1,7 +1,7 @@
 import express from 'express';
 import { json } from 'express';
 import { connect } from 'mongoose';
-import userRoutes from './routes/userRoutes.js';
+import router from './routes/userRoutes.js';
 import cors from 'cors';
 import serverless from 'serverless-http';
 
@@ -32,6 +32,6 @@ app.use(cors());
 app.use(json());
 
 // Routes
-app.use('/users/', userRoutes);
+app.use('/users/', router);
 
 export const handler = serverless(app);
