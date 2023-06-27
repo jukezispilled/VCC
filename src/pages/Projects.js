@@ -1,6 +1,5 @@
 import React from "react";
-import { Carousel, IconButton } from "@material-tailwind/react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
+import { Carousel } from "@material-tailwind/react";
 
 export default function Projects() {
     return(
@@ -38,9 +37,9 @@ export default function Projects() {
                                 </div>
                             )}
                         >
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
                         </Carousel>
                     </div>
                 </div>
@@ -67,9 +66,9 @@ export default function Projects() {
                                 </div>
                             )}
                         >
-                            <img src="/aq1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/aq1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
                         </Carousel>
                         <div className="md:w-[48%]">
                             <div className="text-4xl font-bold mb-4 text-[#25406b]">Camillus Aqueduct</div>
@@ -112,9 +111,9 @@ export default function Projects() {
                                 </div>
                             )}
                         >
-                            <img src="/wpb.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/wpb.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
                         </Carousel>
                     </div>
                 </div>
@@ -141,9 +140,9 @@ export default function Projects() {
                                 </div>
                             )}
                         >
-                            <img src="/jgb.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/jgb.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
                         </Carousel>
                         <div className="md:w-[48%]">
                             <div className="text-4xl font-bold mb-4 text-[#25406b]">John Glenn Boulevard</div>
@@ -186,9 +185,9 @@ export default function Projects() {
                                 </div>
                             )}
                         >
-                            <img src="/hoxie.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
-                            <img src="/proj1.jpg" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/hoxie.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
+                            <img src="/proj1.jpg" alt="" className="bg-cover h-full w-full rounded-xl"></img>
                         </Carousel>
                     </div>
                 </div>

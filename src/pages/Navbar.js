@@ -1,13 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { AuthContext } from './authcontext';
-import { useAuth0 } from '@auth0/auth0-react';
+import React, { useState, useEffect } from 'react';
 import "./nav.css";
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const [onScroll, setOnScroll] = useState(false);
-
-    const { logout, isAuthenticated, loginWithRedirect } = useContext(AuthContext);
 
     useEffect(() => {
         // Add an event listener to the window object

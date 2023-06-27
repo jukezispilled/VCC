@@ -7,7 +7,6 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Employment from './pages/Employment';
 import Contact from './pages/Contact';
-import Lb from './pages/Lb';
 import LoginPage from './pages/LoginPage';
 import Footer from './pages/Footer';
 
@@ -22,7 +21,6 @@ function App() {
                 <Route path='/about' element={<About />} />
                 <Route path='/employment' element={<Employment />} />
                 <Route path='/contact' element={<Contact />} />
-                <Route path='/dashboard' element={<Lb />} />
                 <Route path='/login' element={<LoginPage />} />
             </Routes>
             <Footer />

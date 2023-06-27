@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AnimatedNumbers from "react-animated-numbers";
-import { useEffect } from 'react';
-import "./Home.css";
 import { HorizontalTicker } from "react-infinite-ticker";
+import "./Home.css";
+
 
 export default function Home() {
 
@@ -64,7 +64,7 @@ export default function Home() {
                                         <div className="box-wrapper box-wrapper--vertical" key={id}>
                                             <div className="box box--vertical">
                                                 <div className="relative">
-                                                    <img className="rounded-lg h-[240px] w-[600px]" src={imag} />
+                                                    <img alt="" className="rounded-lg h-[240px] w-[600px]" src={imag} />
                                                     <div className="absolute bottom-[10%] left-[7%] z-10 text-3xl font-semibold text-white">{name}</div>
                                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80 rounded-lg"></div>
                                                 </div>
