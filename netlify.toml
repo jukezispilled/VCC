@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [functions]
   external_node_modules = ["express"]
   node_bundler = "esbuild"
@@ -6,3 +7,17 @@
   from = "/users/*"
   status = 200
   to = "/.netlify/functions/:splat"
+=======
+[build]
+  command = "npm run build"
+  publish = "frontend/build"
+
+[build.environment]
+  FUNCTIONS_SRC = "backend"
+  FUNCTIONS_DIST = "functions"
+
+[[redirects]]
+  from = "/users/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+>>>>>>> d938f77149cd7244600525195134cf4d8aef49bb
