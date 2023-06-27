@@ -6,7 +6,6 @@ import cors from 'cors';
 import serverless from 'serverless-http';
 
 const app = express();
-const port = 3001;
 
 const connectionString = process.env.CONN_STRING
 
@@ -19,7 +18,7 @@ connect(connectionString, {
     console.log('Connected to MongoDB Atlas');
     // Start the server after successfully connecting to the database
     app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
+      console.log(`Server is running`);
     });
   })
   .catch((error) => {
