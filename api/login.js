@@ -2,10 +2,10 @@ import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
 
 const secretKey = process.env.SECRET_KEY;
-const mongoURI = process.env.MONGODB_URI; // Replace with your MongoDB Atlas connection string
+const CONN_STRING = process.env.MONGODB_URI; // Replace with your MongoDB Atlas connection string
 
 // Connect to MongoDB Atlas
-mongoose.connect(mongoURI, {
+mongoose.connect(CONN_STRING, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
