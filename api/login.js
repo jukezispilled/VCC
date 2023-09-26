@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
-const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
+const CON_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
 
 export default async (req, res) => {
   try {
     // Connect to MongoDB Atlas using Mongoose
-    await mongoose.connect(CONN_STRING);
+    await mongoose.connect(CON_STRING);
 
     // Check if the Mongoose connection is successful
     if (mongoose.connection.readyState === 1) {
