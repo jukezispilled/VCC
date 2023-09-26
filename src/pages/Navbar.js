@@ -23,7 +23,7 @@ export default function Navbar() {
 
     return(
         <div className="w-screen fixed top-0 z-10">  
-            <nav className={`${onScroll ? '':'transition ease-in-out duration-500'} bg-[#ffffff] shadow`}>
+            <nav className={`${onScroll ? '':'transition ease-in-out duration-500'} bg-[#ffffff] border border-b`}>
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -68,7 +68,7 @@ export default function Navbar() {
                     </div>
                     <div>
                         <div className={`flex-1 justify-self-center md:block md:mt-0 ${navbar ? "block" : "hidden"}`}>
-                            <ul className="items-center justify-center my-5 pb-5 md:pb-0 md:my-0 space-y-8 md:flex md:space-x-3 lg:space-x-3 md:space-y-0">
+                            <ul className="items-center justify-center my-5 pb-5 md:pb-0 md:my-0 space-y-8 md:flex md:space-x-1 lg:space-x-2 md:space-y-0">
                                 <li className="text-xl text-[#2c4096] hover:text-[#24336f] transition ease-in-out duration-500 p-2 h-full rounded-lg font-semibold">
                                     <a href="/projects">Projects</a>
                                 </li>
@@ -84,9 +84,11 @@ export default function Navbar() {
                                 <li className="text-xl text-[#2c4096] hover:text-[#24336f] transition ease-in-out duration-500 p-2 rounded-lg font-semibold">
                                     <a href="/contact">Contact</a>
                                 </li>
-                                <li className="text-xl transition ease-in-out duration-500 border-[3px] border-[#e9ecf8] p-2.5 rounded-lg font-semibold bg-[#234d91] text-white">
-                                    <a href="/login">Login</a>
-                                </li>
+                                <a href="/login">  
+                                    <button className="text-xl transition ease-in-out duration-500 hover:bg-blue-800 px-2.5 py-1.5 rounded-lg font-semibold bg-[#234d91] text-white">
+                                        Login
+                                    </button>
+                                </a>
                             </ul>
                         </div>
                     </div>

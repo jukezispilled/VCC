@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const Contact = () => {
   const handleSubmit = async (values, actions) => {
+    console.log('Form Values:', values);
     try {
       await axios.post('/users/contact', values );
 
@@ -94,7 +95,7 @@ const Contact = () => {
                                         {isSubmitting ? 'Sending...' : 'Send'}
                                     </button>
                                 </Form>
-                        )}
+                            )}
                         </Formik>
                     </div>
                 </div>

@@ -39,10 +39,10 @@ export default function Home() {
     return (
         <div className='overflow-clip'><div className="h-screen w-screen bg-cover" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/homebgfinal.png'})` }}>
                 <div className="pt-[30%] md:pt-[12%] 2xl:pt-[12%] font-semibold pl-12 md:pl-32 h-screen pr-16 md:w-1/2 md:pr-0 xl:pl-52">
-                    <div className="text-6xl xl:text-8xl 2xl:text-[115px] text-white font-extrabold">
+                    <div className="text-6xl xl:text-8xl 2xl:text-[105px] text-white font-extrabold">
                         Infrastructure Built to Last
                     </div>
-                    <div className="text-2xl text-blue-200 font-semibold">Building strong foundations for over <span className="inline-block"><AnimatedNumbers includeComma animateToNumber={60} configs={[{ mass: 1, tension: 220, friction: 100 }, { mass: 1, tension: 180, friction: 130 }, { mass: 1, tension: 280, friction: 90 }, { mass: 1, tension: 180, friction: 135 }, { mass: 1, tension: 260, friction: 100 }, { mass: 1, tension: 210, friction: 180 }]}/></span>
+                    <div className="text-2xl text-blue-200 font-semibold">Building strong foundations for over <span className="inline-block"><AnimatedNumbers includeComma animateToNumber={60} configs={[{ mass: 1, tension: 100, friction: 50 }, { mass: 1, tension: 180, friction: 130 }, { mass: 1, tension: 280, friction: 90 }, { mass: 1, tension: 180, friction: 135 }, { mass: 1, tension: 260, friction: 100 }, { mass: 1, tension: 210, friction: 180 }]}/></span>
                     &nbsp;years</div>
                     <a href="/employment"> 
                         <button type="button" class="py-3 px-4 mt-3 bg-blue-600 shadow-lg hover:bg-blue-800 text-white w-auto transition ease-in duration-400 text-center text-xl font-bold rounded-lg">
@@ -60,7 +60,7 @@ export default function Home() {
                             duration={35000}
                             >
                                 {proj.map(({ id, imag, name }) => (
-                                    <a href="/projects" className="hover:scale-[103%] transition ease-in-out duration-500">
+                                    <a href="/projects" className="p-2 hover:scale-[101%] transition ease-in-out duration-500">
                                         <div className="box-wrapper box-wrapper--vertical" key={id}>
                                             <div className="box box--vertical">
                                                 <div className="relative">
@@ -75,7 +75,7 @@ export default function Home() {
                             </HorizontalTicker>
                             <div className="w-screen flex justify-center translate-x-5 md:translate-x-2">
                                 <a href="/projects">
-                                    <button type="button" class="py-3 px-4 mt-12 bg-blue-400 shadow-lg hover:bg-blue-600 text-white w-auto transition ease-in duration-400 text-center text-xl font-bold rounded-lg">
+                                    <button type="button" class="py-3 px-4 mt-12 bg-blue-400 shadow-lg hover:bg-blue-600 text-white w-auto transition ease-in duration-300 text-center text-xl font-bold rounded-lg">
                                         View All Projects
                                     </button>
                                 </a>

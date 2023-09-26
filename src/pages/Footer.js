@@ -20,7 +20,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="text-white text-l underline font-medium">
-                    <a href="dashboard">Login</a>
+                    <a href="login">Login</a>
                 </div>
             </div>
         </footer>
