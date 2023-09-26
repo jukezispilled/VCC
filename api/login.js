@@ -1,53 +1,25 @@
 import jwt from 'jsonwebtoken';
-import mongoose from 'mongoose';
+import { MongoClient } from 'mongodb';
 
 const secretKey = process.env.SECRET_KEY;
 const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
-
-// Define the User Schema
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  password: String,
-  role: String,
-  // You can add more fields as needed
-});
-
-// Register the User model
-const User = mongoose.model('User', userSchema);
-
-// Connect to MongoDB Atlas
-mongoose.connect(CONN_STRING, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => {
-    console.log('Connected to MongoDB Atlas');
-  })
-  .catch((error) => {
-    console.error('Failed to connect to MongoDB Atlas:', error);
-  });
-
-// Generate JWT
-function generateJWT(user) {
-  const payload = {
-    userId: user._id,
-    role: user.role,
-  };
-
-  const options = {
-    expiresIn: '1h',
-  };
-
-  return jwt.sign(payload, secretKey, options);
-}
 
 export default async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Find the user by email
-    const user = await User.findOne({ email });
+    const client = new MongoClient(CONN_STRING, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    await client.connect();
+    console.log('Connected to MongoDB Atlas');
+
+    const db = client.db(); // Get the database instance
+
+    // Check if the user exists
+    const user = await db.collection('users').findOne({ email });
 
     // If user not found, return error
     if (!user) {
@@ -59,7 +31,7 @@ export default async (req, res) => {
     // Check if the password matches
     const passwordMatches = user.password === password;
 
-    // If password doesn't match, return error
+    // If the password doesn't match, return error
     if (!passwordMatches) {
       console.error('Wrong password');
       res.status(401).json({ message: 'Wrong password' });
@@ -69,9 +41,10 @@ export default async (req, res) => {
     // Generate and send the JWT
     const token = generateJWT(user);
     res.status(200).json({ token });
+
+    client.close(); // Close the MongoDB connection
   } catch (error) {
     console.error('Failed to log in:', error);
     res.status(500).json({ message: 'Failed to log in' });
   }
 };
-
