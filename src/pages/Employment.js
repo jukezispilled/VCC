@@ -6,11 +6,7 @@ import axios from 'axios';
 const Employment = () => {
   const handleSubmit = async (values, actions) => {
     try {
-      await axios.post('https://vector-corp.vercel.app/api/apply', values, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+      await axios.post('https://vector-corp.vercel.app/api/apply', values );
 
       console.log('Email sent successfully!');
       actions.setSubmitting(false);
