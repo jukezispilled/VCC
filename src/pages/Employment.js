@@ -14,7 +14,7 @@ const Employment = () => {
       formData.append('workExperience', values.workExperience);
       formData.append('resume', values.resume);
 
-      await axios.post('http://localhost:3001/users/apply', formData, {
+      await axios.post('https://vector-corp.vercel.app/api/apply', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
