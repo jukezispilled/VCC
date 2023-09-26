@@ -4,6 +4,20 @@ import { MongoClient } from 'mongodb';
 const secretKey = process.env.SECRET_KEY;
 const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
 
+// Function to generate JWT
+function generateJWT(user) {
+  const payload = {
+    userId: user._id,
+    role: user.role,
+  };
+
+  const options = {
+    expiresIn: '1h', // Set your desired expiration time
+  };
+
+  return jwt.sign(payload, secretKey, options);
+}
+
 export default async (req, res) => {
   const { email, password } = req.body;
 
@@ -38,8 +52,10 @@ export default async (req, res) => {
       return;
     }
 
-    // Generate and send the JWT
+    // Generate JWT token
     const token = generateJWT(user);
+
+    // Send the token as part of the response
     res.status(200).json({ token });
 
     client.close(); // Close the MongoDB connection
