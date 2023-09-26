@@ -2,8 +2,10 @@ import nodemailer from 'nodemailer';
 
 export default async (req, res) => {
   try {
-    const { name, phone, address, email, workExperience } = req.body;
-    const resume = req.file;
+    const { name, phone, address, email, workExperience, resume } = req.body;
+
+    // Decode the Base64-encoded resume back into binary data
+    const resumeData = Buffer.from(resume, 'base64');
 
     // Create a Nodemailer transporter
     const transporter = nodemailer.createTransport({
@@ -28,8 +30,8 @@ export default async (req, res) => {
       `,
       attachments: [
         {
-          filename: resume.originalname,
-          content: resume.buffer,
+          filename: 'resume.pdf', // Change the filename as needed
+          content: resumeData,
         },
       ],
     };

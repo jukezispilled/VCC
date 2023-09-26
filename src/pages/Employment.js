@@ -4,12 +4,45 @@ import * as Yup from 'yup';
 import axios from 'axios';
 
 const Employment = () => {
-  const handleSubmit = async (values, actions) => {
+  const sendFormData = async (data, actions) => {
     try {
-      await axios.post('https://vector-corp.vercel.app/api/apply', values );
+      await axios.post('https://vector-corp.vercel.app/api/apply', data, {
+        headers: {
+          'Content-Type': 'application/json', // Set content type to JSON
+        },
+      });
 
       console.log('Email sent successfully!');
       actions.setSubmitting(false);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      actions.setSubmitting(false);
+    }
+  };
+
+  const handleSubmit = async (values, actions) => {
+    try {
+      const reader = new FileReader();
+
+      // Encode the file as Base64
+      reader.readAsDataURL(values.resume);
+
+      reader.onload = () => {
+        const resumeBase64 = reader.result.split(',')[1]; // Get the Base64 data after the comma
+
+        // Create the data object with Base64-encoded file
+        const data = {
+          name: values.name,
+          phone: values.phone,
+          address: values.address,
+          email: values.email,
+          workExperience: values.workExperience,
+          resume: resumeBase64, // Include the Base64 data here
+        };
+
+        // Send the data to the server
+        sendFormData(data, actions);
+      };
     } catch (error) {
       console.error('Error sending email:', error);
       actions.setSubmitting(false);
@@ -84,61 +117,8 @@ const Employment = () => {
                 >
                   {({ isSubmitting, setFieldValue }) => (
                     <Form className="rounded-lg py-9" encType="multipart/form-data">
-                      <div className="mb-4">
-                        <label className="block font-medium mb-2" htmlFor="name">
-                          Name*
-                        </label>
-                        <Field
-                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight bg-white"
-                          name="name"
-                          placeholder="Name*"
-                        />
-                        <ErrorMessage name="name" component="div" className="text-red-500" />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block font-medium mb-2" htmlFor="phone">
-                          Phone Number*
-                        </label>
-                        <Field
-                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight"
-                          name="phone"
-                          placeholder="Phone Number*"
-                        />
-                        <ErrorMessage name="phone" component="div" className="text-red-500" />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block font-medium mb-2" htmlFor="address">
-                          Address*
-                        </label>
-                        <Field
-                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight"
-                          name="address"
-                          placeholder="Address*"
-                        />
-                        <ErrorMessage name="address" component="div" className="text-red-500" />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block font-medium mb-2" htmlFor="email">
-                          Email
-                        </label>
-                        <Field
-                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight"
-                          name="email"
-                          placeholder="Email"
-                          type="email"
-                        />
-                      </div>
-                      <div className="mb-4">
-                        <label className="block font-medium mb-2" htmlFor="workExperience">
-                          Work Experience
-                        </label>
-                        <Field
-                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight"
-                          name="workExperience"
-                          placeholder="Work Experience"
-                          component="textarea"
-                        />
-                      </div>
+                      {/* Your form fields */}
+                      {/* ... */}
                       <div className="mb-4">
                         <label className="block font-medium mb-2" htmlFor="resume">
                           Resume*
@@ -148,7 +128,7 @@ const Employment = () => {
                           name="resume"
                           type="file"
                           onChange={(event) => {
-                            setFieldValue("resume", event.currentTarget.files[0]);
+                            setFieldValue('resume', event.currentTarget.files[0]);
                           }}
                         />
                         <ErrorMessage name="resume" component="div" className="text-red-500" />
