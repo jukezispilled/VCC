@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
 
 const secretKey = process.env.SECRET_KEY;
-const CONN_STRING = process.env.MONGODB_URI; // Replace with your MongoDB Atlas connection string
+const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
 
 // Connect to MongoDB Atlas
 mongoose.connect(CONN_STRING, {
@@ -35,7 +35,7 @@ export default async (req, res) => {
 
   try {
     // Use the User model defined in your application
-    const User = mongoose.model('User');
+    const User = mongoose.model('user');
 
     // Find the user by email
     const user = await User.findOne({ email });
