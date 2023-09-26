@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@auth0/auth0-react": "",
-    "@auth0/auth0-spa-js": "",
     "@craco/craco": "",
     "@heroicons/react": "",
     "@testing-library/jest-dom": "",
@@ -26,7 +24,6 @@
     "react": "",
     "react-animated-numbers": "",
     "react-dom": "",
-    "react-fade-in": "",
     "react-google-recaptcha": "",
     "react-hook-form": "",
     "react-infinite-ticker": "",
