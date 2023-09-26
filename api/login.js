@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const CON_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
+const CON_STRING = process.env.MONGODB_URI; // Replace with your MongoDB Atlas connection string
 
 export default async (req, res) => {
   try {
