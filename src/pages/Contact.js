@@ -7,7 +7,7 @@ const Contact = () => {
   const handleSubmit = async (values, actions) => {
     console.log('Form Values:', values);
     try {
-      await axios.post('/users/contact', values );
+      await axios.post('https://vector-corp.vercel.app/api/contact', values );
 
       console.log('Email sent successfully!');
       actions.setSubmitting(false);
