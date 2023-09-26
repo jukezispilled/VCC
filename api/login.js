@@ -1,5 +1,5 @@
+import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
-import { MongoClient } from 'mongodb';
 
 const secretKey = process.env.SECRET_KEY;
 const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
@@ -22,18 +22,14 @@ export default async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const client = new MongoClient(CONN_STRING, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    // Connect to MongoDB Atlas using Mongoose
+    await mongoose.connect(CONN_STRING);
 
-    await client.connect();
-    console.log('Connected to MongoDB Atlas');
-
-    const db = client.db(); // Get the database instance
+    // Get the users collection
+    const Users = mongoose.model('users');
 
     // Check if the user exists
-    const user = await db.collection('users').findOne({ email });
+    const user = await Users.findOne({ email });
 
     // If user not found, return error
     if (!user) {
@@ -58,7 +54,8 @@ export default async (req, res) => {
     // Send the token as part of the response
     res.status(200).json({ token });
 
-    client.close(); // Close the MongoDB connection
+    // Close the Mongoose connection
+    await mongoose.disconnect();
   } catch (error) {
     console.error('Failed to log in:', error);
     res.status(500).json({ message: 'Failed to log in' });
