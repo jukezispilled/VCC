@@ -37,7 +37,7 @@ export default function Home() {
 
 
     return (
-        <div className='overflow-clip'><div className="h-screen w-screen bg-cover" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/homebgfinal-min.png'})` }}>
+        <div className='overflow-clip'><div className="h-screen w-screen bg-cover" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/homebgfinal-min.jpg'})` }}>
                 <div className="pt-[30%] md:pt-[12%] 2xl:pt-[12%] font-semibold pl-12 md:pl-32 h-screen pr-16 md:w-1/2 md:pr-0 xl:pl-52">
                     <div className="text-6xl xl:text-8xl 2xl:text-[105px] text-white font-extrabold">
                         Infrastructure Built to Last
