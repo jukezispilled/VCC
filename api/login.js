@@ -1,63 +1,26 @@
 import mongoose from 'mongoose';
-import jwt from 'jsonwebtoken';
 
-const secretKey = process.env.SECRET_KEY;
 const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
 
-// Function to generate JWT
-function generateJWT(user) {
-  const payload = {
-    userId: user._id,
-    role: user.role,
-  };
-
-  const options = {
-    expiresIn: '1h', // Set your desired expiration time
-  };
-
-  return jwt.sign(payload, secretKey, options);
-}
-
 export default async (req, res) => {
-  const { email, password } = req.body;
-
   try {
     // Connect to MongoDB Atlas using Mongoose
     await mongoose.connect(CONN_STRING);
 
-    // Get the users collection
-    const Users = mongoose.model('users');
-
-    // Check if the user exists
-    const user = await Users.findOne({ email });
-
-    // If user not found, return error
-    if (!user) {
-      console.error('User not found');
-      res.status(404).json({ message: 'User not found' });
-      return;
+    // Check if the Mongoose connection is successful
+    if (mongoose.connection.readyState === 1) {
+      console.log('Connected to MongoDB Atlas');
+      res.status(200).json({ message: 'Connected to MongoDB Atlas' });
+    } else {
+      console.error('Failed to connect to MongoDB Atlas');
+      res.status(500).json({ message: 'Failed to connect to MongoDB Atlas' });
     }
-
-    // Check if the password matches
-    const passwordMatches = user.password === password;
-
-    // If the password doesn't match, return error
-    if (!passwordMatches) {
-      console.error('Wrong password');
-      res.status(401).json({ message: 'Wrong password' });
-      return;
-    }
-
-    // Generate JWT token
-    const token = generateJWT(user);
-
-    // Send the token as part of the response
-    res.status(200).json({ token });
 
     // Close the Mongoose connection
-    await mongoose.disconnect();
+    mongoose.disconnect();
   } catch (error) {
-    console.error('Failed to log in:', error);
-    res.status(500).json({ message: 'Failed to log in' });
+    console.error('Failed to connect to MongoDB Atlas:', error);
+    res.status(500).json({ message: 'Failed to connect to MongoDB Atlas' });
   }
 };
+
