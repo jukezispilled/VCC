@@ -117,8 +117,61 @@ const Employment = () => {
                 >
                   {({ isSubmitting, setFieldValue }) => (
                     <Form className="rounded-lg py-9" encType="multipart/form-data">
-                      {/* Your form fields */}
-                      {/* ... */}
+                      <div className="mb-4">
+                        <label className="block font-medium mb-2" htmlFor="name">
+                          Name*
+                        </label>
+                        <Field
+                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight bg-white"
+                          name="name"
+                          placeholder="Name*"
+                        />
+                        <ErrorMessage name="name" component="div" className="text-red-500" />
+                      </div>
+                      <div className="mb-4">
+                        <label className="block font-medium mb-2" htmlFor="phone">
+                          Phone Number*
+                        </label>
+                        <Field
+                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight"
+                          name="phone"
+                          placeholder="Phone Number*"
+                        />
+                        <ErrorMessage name="phone" component="div" className="text-red-500" />
+                      </div>
+                      <div className="mb-4">
+                        <label className="block font-medium mb-2" htmlFor="address">
+                          Address*
+                        </label>
+                        <Field
+                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight"
+                          name="address"
+                          placeholder="Address*"
+                        />
+                        <ErrorMessage name="address" component="div" className="text-red-500" />
+                      </div>
+                      <div className="mb-4">
+                        <label className="block font-medium mb-2" htmlFor="email">
+                          Email
+                        </label>
+                        <Field
+                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight"
+                          name="email"
+                          placeholder="Email"
+                          type="email"
+                        />
+                      </div>
+                      <div className="mb-4">
+                        <label className="block font-medium mb-2" htmlFor="workExperience">
+                          Work Experience
+                        </label>
+                        <Field
+                          className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight"
+                          name="workExperience"
+                          placeholder="Work Experience"
+                          component="textarea"
+                        />
+                      </div>
                       <div className="mb-4">
                         <label className="block font-medium mb-2" htmlFor="resume">
                           Resume*
