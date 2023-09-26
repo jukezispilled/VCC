@@ -4,6 +4,18 @@ import mongoose from 'mongoose';
 const secretKey = process.env.SECRET_KEY;
 const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
 
+// Define the User Schema
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  password: String,
+  role: String,
+  // You can add more fields as needed
+});
+
+// Register the User model
+const User = mongoose.model('User', userSchema);
+
 // Connect to MongoDB Atlas
 mongoose.connect(CONN_STRING, {
   useNewUrlParser: true,
@@ -34,9 +46,6 @@ export default async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Use the User model defined in your application
-    const User = mongoose.model('user');
-
     // Find the user by email
     const user = await User.findOne({ email });
 
@@ -65,3 +74,4 @@ export default async (req, res) => {
     res.status(500).json({ message: 'Failed to log in' });
   }
 };
+
