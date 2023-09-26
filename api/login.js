@@ -1,8 +1,20 @@
 import jwt from 'jsonwebtoken';
-import User from '../models/User.js';
 import mongoose from 'mongoose';
 
 const secretKey = process.env.SECRET_KEY;
+const mongoURI = process.env.MONGODB_URI; // Replace with your MongoDB Atlas connection string
+
+// Connect to MongoDB Atlas
+mongoose.connect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => {
+    console.log('Connected to MongoDB Atlas');
+  })
+  .catch((error) => {
+    console.error('Failed to connect to MongoDB Atlas:', error);
+  });
 
 // Generate JWT
 function generateJWT(user) {
@@ -22,11 +34,11 @@ export default async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Get the MongoDB collection directly
-    const collection = mongoose.connection.db.collection('users');
+    // Use the User model defined in your application
+    const User = mongoose.model('User');
 
     // Find the user by email
-    const user = await collection.findOne({ email });
+    const user = await User.findOne({ email });
 
     // If user not found, return error
     if (!user) {

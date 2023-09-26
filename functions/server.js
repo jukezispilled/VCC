@@ -1,37 +1,49 @@
 import express from 'express';
 import { json } from 'express';
 import { connect } from 'mongoose';
+import dotenv from 'dotenv'; // Import dotenv here
 import router from './routes/userRoutes.js';
 import cors from 'cors';
 import serverless from 'serverless-http';
 
+dotenv.config(); // Load environment variables from a .env file if available
+
 const app = express();
+const port = process.env.PORT || 3000; // Define the port, with a fallback value of 3000
 
-const connectionString = process.env.CONN_STRING
+const connectionString = process.env.CONN_STRING;
 
-// Connect to MongoDB Atlas
-connect(connectionString, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => {
-    console.log('Connected to MongoDB Atlas');
-    // Start the server after successfully connecting to the database
-    app.listen(port, () => {
-      console.log(`Server is running`);
+// Wrap the MongoDB connection in an async function
+async function startServer() {
+  try {
+    // Connect to MongoDB Atlas
+    await connect(connectionString, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     });
-  })
-  .catch((error) => {
+
+    console.log('Connected to MongoDB Atlas');
+
+    // Enable CORS
+    app.use(cors());
+
+    // Middleware
+    app.use(json());
+
+    // Routes
+    app.use('/users', router);
+
+    // Start the server
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+  } catch (error) {
     console.error('Failed to connect to MongoDB Atlas:', error);
-  });
+  }
+}
 
-// Enable CORS
-app.use(cors());
+// Call the async function to start the server
+startServer();
 
-// Middleware
-app.use(json());
-
-// Routes
-app.use('/users', router);
-
+// Export the serverless handler
 export const handler = serverless(app);

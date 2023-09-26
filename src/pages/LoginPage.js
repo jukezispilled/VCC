@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 const LoginForm = ({ setAuthToken }) => {
   const handleLogin = async (values, { setSubmitting, setErrors }) => {
     try {
-      const response = await axios.post('http://localhost:3001/users/login', values);
+      const response = await axios.post('http://localhost:3000/users/login', values);
       const { token } = response.data;
 
       setAuthToken(token);

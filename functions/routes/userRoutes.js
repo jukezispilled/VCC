@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
-import requireRole from '../middleware/requireRole.js';
+import requireRole from '../../middleware/requireRole.js';
 import mongoose from 'mongoose';
 import nodemailer from 'nodemailer';
 import multer from 'multer';

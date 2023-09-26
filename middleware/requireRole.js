@@ -1,6 +1,7 @@
 // middleware/requireRole.js
 
-import { verify } from 'jsonwebtoken';
+import pkg from 'jsonwebtoken';
+const { verify } = pkg;
 const secretKey = 'your-secret-key';
 
 // Middleware for role-based access control
