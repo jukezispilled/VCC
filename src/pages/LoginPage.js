@@ -28,7 +28,7 @@ const LoginForm = ({ setAuthToken }) => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="w-100 xl:bg-[#f1f2f8] rounded-xl xl:p-14 xl:shadow-sm">
-        <h2 className="text-4xl font-bold mb-6">Login</h2>
+        <h2 className="text-4xl font-bold mb-6">Log Me In</h2>
         <Formik
           initialValues={{ email: '', password: '' }}
           validationSchema={validationSchema}
