@@ -1,4 +1,7 @@
+import dotenv from 'dotenv';
 import { MongoClient } from 'mongodb';
+
+dotenv.config();
 
 const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
 
