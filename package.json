@@ -7,7 +7,6 @@
     "@auth0/auth0-spa-js": "",
     "@craco/craco": "",
     "@heroicons/react": "",
-    "@material-tailwind/react": "",
     "@testing-library/jest-dom": "",
     "@testing-library/react": "",
     "@testing-library/user-event": "",
@@ -44,7 +43,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "install": "npm install --legacy-peer-deps",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node backend/server.js"
