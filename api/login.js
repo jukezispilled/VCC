@@ -3,11 +3,11 @@ import { MongoClient } from 'mongodb';
 
 dotenv.config();
 
-const CONN_STRING = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
+const MONGO_URI = process.env.CONN_STRING; // Replace with your MongoDB Atlas connection string
 
 export default async (req, res) => {
   try {
-    const client = new MongoClient(CONN_STRING, {
+    const client = new MongoClient(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
