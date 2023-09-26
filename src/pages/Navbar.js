@@ -68,7 +68,7 @@ export default function Navbar() {
                     </div>
                     <div>
                         <div className={`flex-1 justify-self-center md:block md:mt-0 ${navbar ? "block" : "hidden"}`}>
-                            <ul className="items-center justify-center my-5 pb-5 md:pb-0 md:my-0 space-y-8 md:flex md:space-x-1 lg:space-x-2 md:space-y-0">
+                            <ul className="items-center justify-center my-5 pb-5 md:pb-0 md:my-0 space-y-5 md:flex md:space-x-1 lg:space-x-2 md:space-y-0">
                                 <li className="text-xl text-[#2c4096] hover:text-[#24336f] transition ease-in-out duration-500 p-2 h-full rounded-lg font-semibold">
                                     <a href="/projects">Projects</a>
                                 </li>
@@ -85,7 +85,7 @@ export default function Navbar() {
                                     <a href="/contact">Contact</a>
                                 </li>
                                 <a href="/login">  
-                                    <button className="text-xl transition ease-in-out duration-500 hover:bg-blue-800 px-2.5 py-1.5 rounded-lg font-semibold bg-[#234d91] text-white">
+                                    <button className="text-xl transition ease-in-out duration-500 hover:bg-blue-800 mx-2 mt-4 px-4 py-3 md:mt-0 rounded-lg font-semibold bg-[#234d91] text-white">
                                         Login
                                     </button>
                                 </a>
