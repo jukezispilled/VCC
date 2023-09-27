@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer';
 
+const E_PASS = process.env.EMAIL_PASS;
+
 export default async (req, res) => {
   try {
     const { name, phone, address, email, workExperience, resume } = req.body;
@@ -12,7 +14,7 @@ export default async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'jax46500@gmail.com',
-        pass: 'uqdjdatfyjqzkaoo',
+        pass: E_PASS,
       },
     });
 
