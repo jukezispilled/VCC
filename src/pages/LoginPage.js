@@ -78,6 +78,12 @@ const LoginForm = ({ setAuthToken }) => {
 };
 
 const AdminDashboard = () => {
+
+  const handleLogout = () => {
+    setAuthToken('');
+    localStorage.removeItem('authToken');
+  };
+
   return (
     <div className="h-screen bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
       <div className="px-[10%] mx-[2%] lg:px-[15%] pt-[26%] md:pt-[8%]">
@@ -100,6 +106,12 @@ const AdminDashboard = () => {
 };
 
 const GeneralUserDashboard = () => {
+
+  const handleLogout = () => {
+    setAuthToken('');
+    localStorage.removeItem('authToken');
+  };
+  
   return (
     <div className="h-screen bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
       <div className="px-[10%] mx-[2%] lg:px-[15%] pt-[26%] md:pt-[8%]">
@@ -143,11 +155,6 @@ const LoginPage = () => {
       dashboardComponent = <GeneralUserDashboard />;
     }
   }
-
-  const handleLogout = () => {
-    setAuthToken('');
-    localStorage.removeItem('authToken');
-  };
 
   return (
     <div>
