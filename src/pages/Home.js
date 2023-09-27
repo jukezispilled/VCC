@@ -1,6 +1,7 @@
 import React from 'react';
 import AnimatedNumbers from "react-animated-numbers";
 import { HorizontalTicker } from "react-infinite-ticker";
+import Contact from './Contact';
 import "./Home.css";
 
 
@@ -80,6 +81,7 @@ export default function Home() {
                                     </button>
                                 </a>
                             </div>
+                            <Contact />
                         </div>
                     </div>
                 </div>
