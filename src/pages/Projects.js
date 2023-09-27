@@ -3,7 +3,7 @@ import React from "react";
 export default function Projects() {
     return(
         <div className="h-min px-[12%] pt-[22%] md:pt-[10%] xl:pt-[8%] bg-cover bg-fixed pb-[14%]">
-            <div className="text-6xl font-bold my-7 text-[#2f4e80]">Projects</div>
+            <div className="text-3xl lg:text-5xl font-bold my-7 text-[#2f4e80]">Projects</div>
             <div className="h-min rounded-xl xl:bg-blue-100 xl:px-10 xl:py-1">
                 <div className="my-8">   
                     <div className="py-5 grid space-y-10 md:flex md:space-x-12 md:space-y-0 h-min">

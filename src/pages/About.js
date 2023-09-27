@@ -2,8 +2,8 @@ import React from "react";
 
 export default function About() {
     return(
-        <div className="h-screen px-[15%] pt-[22%] md:pt-[10%] xl:pt-[8%] bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
-            <div className="text-6xl font-bold mt-7 mb-10 text-[#2f4e80]">About</div>
+        <div className="h-screen px:-[10%] lg:px-[15%] pt-[22%] md:pt-[10%] xl:pt-[8%] bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
+            <div className="text-3xl lg:text-5xl font-bold mt-7 mb-10 text-[#2f4e80]">About</div>
             <div className="h-max">
                 <div className="md:flex space-y-5 md:space-y-0 md:space-x-20">
                     <div className="w-full md:w-[55%]">

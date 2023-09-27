@@ -61,10 +61,10 @@ const Employment = () => {
   return (
     <>
       <div className="bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
-        <div className="px-[10%] mx-[8.5%] pt-[22%] md:pt-[10%] xl:pt-[8%] text-xl">
+        <div className="px:-[10%] lg:px-[15%] pt-[22%] md:pt-[10%] xl:pt-[8%] text-xl">
           <div className="xl:bg-[#eef0f7] h-min rounded-xl xl:shadow-md xl:p-10">
             <div className="pb-4">
-            <div className="text-5xl font-bold mb-7">Employment</div>
+            <div className="text-3xl lg:text-5xl font-bold mb-7">Employment</div>
               Click&nbsp;
               <a
                 className="font-bold text-blue-600 hover:text-blue-700 transition ease-in duration-200"
