@@ -3,11 +3,11 @@ import Swiper0 from "./Swiper0.js";
 
 export default function Projects() {
     
-const eandb = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Excavation and Backfill</div>
-const candr = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Concrete Construction and Repair</div>
-const bd = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Bridge Demolition</div>
-const sd = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Storm Drains</div>
-const se = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Steel Erection</div>
+const eandb = <div className="py-.5 px-2 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Excavation and Backfill</div>
+const candr = <div className="py-.5 px-2 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Concrete Construction and Repair</div>
+const bd = <div className="py-.5 px-2 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Bridge Demolition</div>
+const sd = <div className="py-.5 px-2 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Storm Drains</div>
+const se = <div className="py-.5 px-2 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Steel Erection</div>
 
 const images1 = [
     { src: process.env.PUBLIC_URL + '/ped0.jpg', alt: 'Slide 1' },
