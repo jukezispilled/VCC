@@ -6,7 +6,15 @@ export default function About() {
           <div className="md:flex space-y-5 md:space-y-0 md:space-x-20">
             <div className="relative w-full md:w-[55%]">
               {/* Overlay */}
-              <div className="absolute inset-0 bg-zinc-800 opacity-30 rounded-lg z-10"></div>
+              <div className="absolute inset-0 bg-zinc-900 opacity-50 rounded-lg z-10 w-full h-[300px] md:h-[450px]"></div>
+              <div className="absolute inset-0 rounded-lg z-20">
+                <div className="h-full w-full flex justify-center">
+                  <div className="grid content-center text-center md:-mt-24 lg:-mt-8 xl:mt-0">
+                    <div className="text-slate-300 text-[45px] leading-none font-semibold px-[10%]">Heavy Highway and Bridge Construction</div>
+                    <div className="text-slate-300 text-xl font-semibold">Since 1963</div>
+                  </div>
+                </div>
+              </div>
               <div className="h-[300px] md:h-[450px] w-full rounded-lg bg-cover relative" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/wpb.jpg'})` }}>
                 {/* Image */}
               </div>
