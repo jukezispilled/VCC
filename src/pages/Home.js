@@ -64,7 +64,7 @@ export default function Home() {
                     <div className="text-[45px] leading-none md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[105px] text-white font-extrabold">
                         Infrastructure Built to Last
                     </div>
-                    <div className="text-2xl text-blue-200 font-semibold">Building strong foundations since 1963</div>
+                    <div className="text-2xl text-blue-300 font-semibold">Building strong foundations since 1963</div>
                     <a href="/employment"> 
                         <button type="button" class="py-3 px-4 mt-3 bg-blue-500 shadow-lg hover:bg-blue-600 text-white w-auto transition ease-in duration-400 text-center text-xl font-bold rounded-lg">
                             Join Us
