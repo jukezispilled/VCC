@@ -117,12 +117,14 @@ const GeneralUserDashboard = ({ setAuthToken }) => {
       <div className="px-[10%] mx-[2%] lg:px-[15%] pt-[26%] md:pt-[8%]">
         <div className="w-full flex justify-between">
           <div className="text-4xl lg:text-5xl font-bold my-7">Dashboard</div>
-          <button
-            className="p-3 m-0 h-min bg-red-500 hover:bg-red-700 transition ease-in-out duration-500 text-white rounded-lg font-semibold"
-            onClick={handleLogout}
-          >
-            Logout
-          </button>
+          <div>
+            <button
+              className="p-3 m-0 h-min bg-red-500 hover:bg-red-700 transition ease-in-out duration-500 text-white rounded-lg font-semibold"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          </div>
         </div>
         <div className="xl:bg-[#eef0f7] h-min rounded-xl xl:shadow-md xl:p-10">
           <div className="text-lg font-semibold">Files:</div>
