@@ -108,7 +108,7 @@ export default function Home() {
             <div className='h-[360px] bg-white'></div>
             <div>
                 <div className="bg-white px-[12%] lg:px-[18%] md:pt-[2%] xl:pt-[4%] pb-[7%]">
-                <div className="xl:bg-[#eef0f7] h-min xl:shadow-md rounded-xl xl:p-10 pb-[7%] xl:border-2 border-slate-300">
+                <div className="xl:bg-[#fafbff] h-min xl:shadow-md rounded-xl xl:p-10 pb-[7%] xl:border-2 border-slate-300">
                 <div className="text-4xl lg:text-5xl font-bold mb-7">Contact Us</div>
                     <div>
                         <Formik

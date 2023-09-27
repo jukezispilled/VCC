@@ -62,7 +62,7 @@ const Employment = () => {
     <>
       <div className="bg-cover bg-[#ffffff] bg-fixed pb-[14%] xl:pb-[7%]">
         <div className="px-[10%] mx-[2%] pt-[27%] md:pt-[12%] xl:pt-[8%] text-xl">
-          <div className="xl:bg-[#eef0f7] h-min rounded-xl xl:shadow-md xl:p-10 xl:border-2 border-slate-300">
+          <div className="xl:bg-[#fafbff] h-min rounded-xl xl:shadow-md xl:p-10 xl:border-2 border-slate-300">
             <div className="pb-4">
             <div className="text-4xl lg:text-5xl font-bold mb-7">Employment</div>
               Click&nbsp;
