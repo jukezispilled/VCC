@@ -9,6 +9,52 @@ const bd = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-fu
 const sd = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Storm Drains</div>
 const se = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-full whitespace-nowrap">Steel Erection</div>
 
+const images1 = [
+    { src: process.env.PUBLIC_URL + '/ped0.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/ped.jpg', alt: 'Slide 2' },
+    { src: process.env.PUBLIC_URL + '/ped1.jpg', alt: 'Slide 3' },
+    // Add more images as needed
+];
+
+const images2 = [
+    { src: process.env.PUBLIC_URL + '/aq1.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/camillus-aqueduct-01.jpg', alt: 'Slide 2' },
+    { src: process.env.PUBLIC_URL + '/camillus-aqueduct-02.jpg', alt: 'Slide 3' },
+    { src: process.env.PUBLIC_URL + '/camillus-aqueduct-04.jpg', alt: 'Slide 4' },
+    { src: process.env.PUBLIC_URL + '/camillus-aqueduct-05.jpg', alt: 'Slide 5' },
+    { src: process.env.PUBLIC_URL + '/camillus-aqueduct-08.jpg', alt: 'Slide 6' },
+    // Add more images as needed
+];
+
+const images3 = [
+    { src: process.env.PUBLIC_URL + '/whitney_point_bridge_10.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/whitney-point-16.jpg', alt: 'Slide 2' },
+    { src: process.env.PUBLIC_URL + '/whitney-point-17.jpg', alt: 'Slide 3' },
+    { src: process.env.PUBLIC_URL + '/whitney_point_bridge_01.jpg', alt: 'Slide 4' },
+    { src: process.env.PUBLIC_URL + '/whitney_point_bridge_07.jpg', alt: 'Slide 5' },
+    { src: process.env.PUBLIC_URL + '/whitney_point_bridge_09.jpg', alt: 'Slide 6' },
+    { src: process.env.PUBLIC_URL + '/whitney_point_bridge_15.jpg', alt: 'Slide 6' },
+    // Add more images as needed
+];
+
+const images4 = [
+    { src: process.env.PUBLIC_URL + '/john_glenn_boulevard_02.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/john_glenn_boulevard_09.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/john_glenn_boulevard_12.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/john_glenn_boulevard_08.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/john_glenn_boulevard_07.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/john_glenn_boulevard_04.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/john_glenn_boulevard_10.jpg', alt: 'Slide 1' },
+    // Add more images as needed
+];
+
+const images5 = [
+    { src: process.env.PUBLIC_URL + '/hoxie-gorge-bridge-04.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/hoxie-gorge-bridge-03.jpg', alt: 'Slide 1' },
+    { src: process.env.PUBLIC_URL + '/hoxie-gorge-bridge-02_background_image.jpg', alt: 'Slide 1' },
+    // Add more images as needed
+];
+
     return(
         <div className="h-min px-[12%] pt-[22%] md:pt-[10%] xl:pt-[8%] 2xl:px-[16.5%] bg-cover bg-fixed pb-[14%] bg-white">
             <div className="text-5xl font-bold mt-7 mb-3 text-[#2f4e80] xl:pb-5">Projects</div>
@@ -24,14 +70,14 @@ const se = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-fu
                             <div className="pt-1 text-lg font-bold text-[#375688]">Cost:</div>
                         </div>
                         <div className="md:w-[52%]">
-                            <Swiper0 />
+                            <Swiper0 images={images1} />
                         </div>
                     </div>
                 </div>
                 <div className="my-6">   
                     <div className="pt-5 space-y-10 md:flex md:space-x-12 md:space-y-0 h-min">
                         <div className="md:w-[52%]">
-                            <Swiper0 />
+                            <Swiper0 images={images2} />
                         </div>
                         <div className="md:w-[48%]">
                             <div className="text-4xl font-bold mb-4 text-[#25406b]">Camillus Aqueduct</div>
@@ -54,14 +100,14 @@ const se = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-fu
                             <div className="pt-1 text-lg font-bold text-[#375688]">Cost: <span className="font-medium">$12.5 Million</span></div>
                         </div>
                         <div className="md:w-[52%]">
-                            <Swiper0 />
+                            <Swiper0 images={images3} />
                         </div>
                     </div>
                 </div>
                 <div className="my-6">   
                     <div className="pt-5 space-y-10 md:flex md:space-x-12 md:space-y-0 h-min">
                         <div className="md:w-[52%]">
-                            <Swiper0 />
+                            <Swiper0 images={images4} />
                         </div>
                         <div className="md:w-[48%]">
                             <div className="text-4xl font-bold mb-4 text-[#25406b]">John Glenn Boulevard</div>
@@ -84,7 +130,7 @@ const se = <div className="py-1 px-3 m-2 bg-blue-800 text-white w-min rounded-fu
                             <div className="pt-1 text-lg font-bold text-[#375688]">Cost: <span className="font-medium">$15 Million</span></div>
                         </div>
                         <div className="md:w-[52%]">
-                            <Swiper0 />
+                            <Swiper0 images={images5} />
                         </div>
                     </div>
                 </div>

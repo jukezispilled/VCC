@@ -31,6 +31,7 @@
     "react-scripts": "",
     "react-spring": "",
     "react-transition-group": "",
+    "react-viewer": "^3.2.2",
     "swiper": "^10.3.0",
     "web-vitals": "",
     "yup": ""
