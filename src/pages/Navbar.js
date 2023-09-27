@@ -26,7 +26,7 @@ export default function Navbar() {
     }
 
     return(
-        <div className="w-screen fixed top-0 z-10">  
+        <div className="w-screen fixed top-0 z-30">  
             <nav className={`${onScroll ? '':'transition ease-in-out duration-500'} bg-[#ffffff] border border-b`}>
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
