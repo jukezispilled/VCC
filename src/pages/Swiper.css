@@ -67,7 +67,7 @@ body {
 .swiper-pagination-bullet-active {
   width: 20px; /* Adjust the width as needed */
   height: 20px; /* Adjust the height as needed */
-  background-color: #1024d0; /* Change the color for the active dot */
+  background-color: #234d91; /* Change the color for the active dot */
   opacity: 1;
 }
 
