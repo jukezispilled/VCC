@@ -2,6 +2,12 @@ import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "./Projects.css";
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 export default function Projects() {
     return(
         <div className="h-min px-[12%] pt-[22%] md:pt-[10%] xl:pt-[8%] bg-cover bg-fixed pb-[14%]">
