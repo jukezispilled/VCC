@@ -38,8 +38,8 @@ export default function Home() {
 
     return (
         <div className='overflow-clip'><div className="h-screen w-screen bg-cover" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/homebgfinal-min.jpg'})` }}>
-                <div className="pt-[30%] md:pt-[12%] 2xl:pt-[12%] font-semibold pl-12 md:pl-32 h-screen pr-16 md:w-1/2 md:pr-0 xl:pl-52">
-                    <div className="text-6xl xl:text-8xl 2xl:text-[105px] text-white font-extrabold">
+                <div className="pt-[30%] md:pt-[12%] 2xl:pt-[12%] font-semibold pl-8 md:pl-32 h-screen pr-16 md:w-1/2 md:pr-0 xl:pl-52">
+                    <div className="text-[60px] leading-none md:text-5xl lg:text-6xl xl:text-8xl 2xl:text-[105px] text-white font-extrabold">
                         Infrastructure Built to Last
                     </div>
                     <div className="text-2xl text-blue-200 font-semibold">Building strong foundations for over <span className="inline-block"><AnimatedNumbers includeComma animateToNumber={60} configs={[{ mass: 1, tension: 100, friction: 50 }, { mass: 1, tension: 180, friction: 130 }, { mass: 1, tension: 280, friction: 90 }, { mass: 1, tension: 180, friction: 135 }, { mass: 1, tension: 260, friction: 100 }, { mass: 1, tension: 210, friction: 180 }]}/></span>
