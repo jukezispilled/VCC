@@ -97,7 +97,7 @@ export default function Home() {
                             <div className="w-screen flex justify-center translate-x-5 md:translate-x-2">
                                 <a href="/projects">
                                     <button type="button" class="py-3 px-4 mt-8 bg-blue-500 hover:bg-blue-600 text-white w-auto transition ease-in duration-300 text-center text-xl font-bold rounded-lg">
-                                        View All Projects
+                                        View Projects
                                     </button>
                                 </a>
                             </div>
