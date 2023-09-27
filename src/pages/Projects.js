@@ -1,4 +1,5 @@
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import "./Projects.css";
 
 export default function Projects() {
