@@ -131,7 +131,7 @@ const LoginPage = () => {
         <>
           {dashboardComponent}
           <button
-            className="absolute top-[26%] -pt-7 md:top-[15%] 2xl:top-[15%] right-[8%] xl:right-[18.5%] p-3 bg-red-500 hover:bg-red-700 transition ease-in-out duration-500 text-white rounded-lg font-semibold"
+            className="absolute top-[20%] md:top-[15%] 2xl:top-[15%] right-[8%] xl:right-[18.5%] p-3 bg-red-500 hover:bg-red-700 transition ease-in-out duration-500 text-white rounded-lg font-semibold"
             onClick={handleLogout}
           >
             Logout
