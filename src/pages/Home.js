@@ -66,7 +66,7 @@ export default function Home() {
                     </div>
                     <div className="text-2xl text-blue-300 font-semibold">Building strong foundations since 1963</div>
                     <a href="/employment"> 
-                        <button type="button" class="py-3 px-4 mt-3 bg-blue-500 shadow-lg hover:bg-blue-600 text-white w-auto transition ease-in duration-400 text-center text-xl font-bold rounded-lg">
+                        <button type="button" class="py-3 px-4 mt-3 bg-blue-500 shadow-lg hover:bg-blue-600 text-white w-auto transition ease-in duration-300 text-center text-xl font-bold rounded-lg">
                             Join Us
                         </button>
                     </a>
@@ -96,7 +96,7 @@ export default function Home() {
                             </HorizontalTicker>
                             <div className="w-screen flex justify-center translate-x-5 md:translate-x-2">
                                 <a href="/projects">
-                                    <button type="button" class="py-3 px-4 mt-8 bg-blue-500 shadow-lg hover:bg-blue-600 text-white w-auto transition ease-in duration-300 text-center text-xl font-bold rounded-lg">
+                                    <button type="button" class="py-3 px-4 mt-8 bg-blue-500 hover:bg-blue-600 text-white w-auto transition ease-in duration-300 text-center text-xl font-bold rounded-lg">
                                         View All Projects
                                     </button>
                                 </a>
