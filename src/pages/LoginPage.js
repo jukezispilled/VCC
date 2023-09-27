@@ -99,7 +99,7 @@ const AdminDashboard = ({ setAuthToken }) => {
         </div>
         <div className="xl:bg-[#eef0f7] h-min rounded-xl xl:shadow-md xl:p-10 w-min">
           <div className="text-lg font-semibold">Files:</div>
-          <div className="whitespace-nowrap"><a className="font-bold text-blue-600 hover:text-blue-700 transition ease-in duration-200" href="/VCCHealthandSafety.pdf" target="_blank" rel="noopener noreferrer">VCC Health and Safety</a></div>
+          <div className="whitespace-nowrap"><a className="font-bold text-blue-600 hover:text-blue-700 transition ease-in duration-200 whitespace-nowrap" href="/VCCHealthandSafety.pdf" target="_blank" rel="noopener noreferrer">VCC Health and Safety</a></div>
         </div>
       </div>
     </div>

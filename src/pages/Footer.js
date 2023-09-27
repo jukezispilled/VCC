@@ -22,12 +22,19 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="text-white text-l font-medium flex flex-row space-x-4 md:space-x-0 md:flex md:flex-col md:space-y-4 -ml-4 lg:flex lg:flex-row lg:space-y-0 lg:space-x-4">
-                    <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="projects">Projects</a></div>
-                    <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="services">Services</a></div>
-                    <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="about">About</a></div>
-                    <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="employment">Employment</a></div>
-                    <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="contact">Contact</a></div>
-                    <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="login">Login</a></div>
+                    <div>
+                        <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="projects">Projects</a></div>
+                        <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="services">Services</a></div>
+                    </div>
+                    <div>
+                        <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="about">About</a></div>
+                        <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="employment">Employment</a></div>
+                    </div>
+                    <div>
+
+                        <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="contact">Contact</a></div>
+                        <div><a className="hover:text-blue-950 transition ease-in duration-100 underline" href="login">Login</a></div>
+                    </div>
                 </div>
             </div>
         </footer>
