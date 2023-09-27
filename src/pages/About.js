@@ -10,8 +10,8 @@ export default function About() {
               <div className="absolute inset-0 rounded-lg z-20">
                 <div className="h-full w-full flex justify-center">
                   <div className="grid content-center text-center md:-mt-24 lg:-mt-8 xl:mt-0">
-                    <div className="text-slate-300 text-[45px] leading-none font-semibold px-[10%]">Heavy Highway and Bridge Construction</div>
-                    <div className="text-slate-300 text-xl font-semibold">Since 1963</div>
+                    <div className="text-blue-300 text-[45px] leading-none font-semibold px-[10%]">Heavy Highway and Bridge Construction</div>
+                    <div className="text-slate-400 text-xl font-semibold">Since 1963</div>
                   </div>
                 </div>
               </div>
