@@ -61,7 +61,7 @@ export default function Home() {
     return (
         <div className='overflow-clip'><div className="h-screen w-screen bg-cover" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/homebgfinal-min.jpg'})` }}>
                 <div className="pt-[30%] md:pt-[12%] 2xl:pt-[12%] font-semibold pl-8 md:pl-32 h-screen pr-16 md:w-1/2 md:pr-0 xl:pl-52">
-                    <div className="text-[45px] leading-none md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[105px] text-white font-extrabold">
+                    <div className="text-[45px] leading-none md:text-6xl lg:text-7xl xl:text-[85px] 2xl:text-[105px] text-white font-extrabold">
                         Infrastructure Built to Last
                     </div>
                     <div className="text-2xl text-blue-300 font-semibold">Building strong foundations since 1963</div>
