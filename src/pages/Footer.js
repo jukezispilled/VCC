@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
     return(
         <footer className="h-min bg-cover" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/foota6.png'})` }}>
-            <div className="p-[5%] md:p-16 ml-[10%] grid content-center space-y-5 md:flex md:justify-items-start md:space-y-0 md:space-x-[15%]">
+            <div className="p-[4%] md:p-16 ml-[10%] grid content-center space-y-5 md:flex md:justify-items-start md:space-y-0 md:space-x-[15%]">
                 <div className="text-white text-l font-medium">
                     <div className="pb-4 flex flex-col space-y-0">
                         <p>Vector Construction Corporation</p>
