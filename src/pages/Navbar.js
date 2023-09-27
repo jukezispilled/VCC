@@ -4,10 +4,14 @@ import "./nav.css";
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const [onScroll, setOnScroll] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
         // Add an event listener to the window object
         window.addEventListener('scroll', handleScroll);
+
+        const authToken = localStorage.getItem('authToken');
+        setIsLoggedIn(!!authToken);
         
         // Remove the event listener when the component unmounts
         return () => window.removeEventListener('scroll', handleScroll);
@@ -86,7 +90,7 @@ export default function Navbar() {
                                 </li>
                                 <a href="/login">  
                                     <button className="text-xl transition ease-in-out duration-500 hover:bg-blue-800 mx-2 mt-4 px-4 py-2 md:mt-0 rounded-lg font-semibold bg-[#234d91] text-white">
-                                        Login
+                                        {isLoggedIn ? "Dashboard" : "Login"}
                                     </button>
                                 </a>
                             </ul>
