@@ -59,8 +59,13 @@ export default function Services() {
     setViewerIsOpen(true);
   };
 
-  const customLightboxStyles = {
-    zIndex: 10000, // Set the zIndex for the lightbox
+  const customStyles = {
+    position: 'fixed', // or 'absolute'
+    top: '0',
+    left: '0',
+    right: '0',
+    bottom: '0',
+    zIndex: '1000', // Adjust the z-index as needed
   };
 
   return (
@@ -94,7 +99,7 @@ export default function Services() {
             alt: service.title,
           }))}
           activeIndex={currentImageIndex}
-          customStyles={customLightboxStyles} // Apply custom lightbox styles
+          customStyles={customStyles} // Apply custom lightbox styles
           noNavbar
           drag={false} // Disable drag to move images
         />
