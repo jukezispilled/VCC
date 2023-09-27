@@ -26,7 +26,7 @@ const Contact = () => {
 
   return (
     <div className="h-screen bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
-        <div className="mx:-[10%] lg:px-[15%] pt-[26%] md:pt-[10%] xl:pt-[8%]">
+        <div className="px-[10%] mx-[2%] pt-[27%] md:pt-[12%] xl:pt-[8%]">
             <div className="xl:bg-[#eef0f7] h-min xl:shadow-md rounded-xl xl:p-10 pb-[10%]">
             <div className="text-4xl lg:text-5xl font-bold mb-7">Contact</div>
                 <div>
