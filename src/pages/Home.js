@@ -74,7 +74,7 @@ export default function Home() {
             </div>
             <div className="relative h-[200px] bg-white w-screen overflow-visible">
                 <div className="absolute left-[-10px] top-[-45px] flex bg-white h-[525px] w-[105%] md:w-[105%] justify-center pt-10 transform rotate-1">
-                    <div className="absolute left-[-15px] top-[30px] grid bg-blue-700 h-full w-[105%] md:w-[105%] content-center pt-10 transform rotate-1 overflow-visible">
+                    <div className="absolute left-[-15px] top-[30px] grid bg-blue-800 h-full w-[105%] md:w-[105%] content-center pt-10 transform rotate-1 overflow-visible">
                         <div className="w-screen flex justify-center absolute top-[10%] text-5xl font-bold -rotate-2 text-white translate-x-3 md:translate-x-0">Projects</div>
                         <div className="w-[105%] -rotate-2 -mt-24 md:-mt-16">
                             <HorizontalTicker
