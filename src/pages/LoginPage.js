@@ -118,7 +118,7 @@ const GeneralUserDashboard = ({ setAuthToken }) => {
         <div className="w-full flex justify-between">
           <div className="text-4xl lg:text-5xl font-bold my-7">Dashboard</div>
           <button
-            className="p-3 bg-red-500 hover:bg-red-700 transition ease-in-out duration-500 text-white rounded-lg font-semibold"
+            className="p-3 m-0 bg-red-500 hover:bg-red-700 transition ease-in-out duration-500 text-white rounded-lg font-semibold"
             onClick={handleLogout}
           >
             Logout
