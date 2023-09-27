@@ -77,8 +77,7 @@ const LoginForm = ({ setAuthToken }) => {
   );
 };
 
-const AdminDashboard = () => {
-
+const AdminDashboard = ({ setAuthToken }) => {
   const handleLogout = () => {
     setAuthToken('');
     localStorage.removeItem('authToken');
@@ -105,8 +104,7 @@ const AdminDashboard = () => {
   );
 };
 
-const GeneralUserDashboard = () => {
-
+const GeneralUserDashboard = ({ setAuthToken }) => {
   const handleLogout = () => {
     setAuthToken('');
     localStorage.removeItem('authToken');
@@ -150,9 +148,9 @@ const LoginPage = () => {
     const userRole = decodedToken ? decodedToken.role : '';
 
     if (userRole === 'admin') {
-      dashboardComponent = <AdminDashboard />;
+      dashboardComponent = <AdminDashboard setAuthToken={setAuthToken} />;
     } else if (userRole === 'general') {
-      dashboardComponent = <GeneralUserDashboard />;
+      dashboardComponent = <GeneralUserDashboard setAuthToken={setAuthToken} />;
     }
   }
 
