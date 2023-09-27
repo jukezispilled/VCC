@@ -84,7 +84,7 @@ const AdminDashboard = () => {
 const GeneralUserDashboard = () => {
   return (
     <div className="h-screen bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
-      <div className="mx:-[10%] lg:px-[15%] pt-[26%] md:pt-[8%]">
+      <div className="px-[10%] mx-[2%] lg:px-[15%] pt-[26%] md:pt-[8%]">
         <div className="text-4xl lg:text-5xl font-bold my-7">Dashboard</div>
         <div className="xl:bg-[#eef0f7] h-min rounded-xl xl:shadow-md xl:p-10">
           <div className=""><a className="font-bold text-blue-600 hover:text-blue-700 transition ease-in duration-200" href="/VCCHealthandSafety.pdf" target="_blank" rel="noopener noreferrer">VCC Health and Safety</a></div>
@@ -130,7 +130,7 @@ const LoginPage = () => {
         <>
           {dashboardComponent}
           <button
-            className="absolute top-[120px] md:top-[15%] 2xl:top-[15%] right-[8%] xl:right-[18.5%] p-3 bg-red-500 hover:bg-red-700 transition ease-in-out duration-500 text-white rounded-lg font-semibold"
+            className="absolute top-[125px] md:top-[15%] 2xl:top-[15%] right-[8%] xl:right-[18.5%] p-3 bg-red-500 hover:bg-red-700 transition ease-in-out duration-500 text-white rounded-lg font-semibold"
             onClick={handleLogout}
           >
             Logout

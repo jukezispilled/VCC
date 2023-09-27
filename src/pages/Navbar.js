@@ -85,7 +85,7 @@ export default function Navbar() {
                                     <a href="/contact">Contact</a>
                                 </li>
                                 <a href="/login">  
-                                    <button className="text-xl transition ease-in-out duration-500 hover:bg-blue-800 mx-2 mt-4 px-4 py-3 md:mt-0 rounded-lg font-semibold bg-[#234d91] text-white">
+                                    <button className="text-xl transition ease-in-out duration-500 hover:bg-blue-800 mx-2 mt-4 px-4 py-2 md:mt-0 rounded-lg font-semibold bg-[#234d91] text-white">
                                         Login
                                     </button>
                                 </a>
