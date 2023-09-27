@@ -81,7 +81,6 @@ export default function Home() {
                                     </button>
                                 </a>
                             </div>
-                            <Contact />
                         </div>
                     </div>
                 </div>
