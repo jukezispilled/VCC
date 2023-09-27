@@ -12,13 +12,6 @@ export default function Navbar() {
 
         const authToken = localStorage.getItem('authToken');
         setIsLoggedIn(!!authToken);
-
-        const handleAuthTokenChange = (e) => {
-            const newAuthToken = localStorage.getItem('authToken');
-            setIsLoggedIn(!!newAuthToken);
-        };
-
-        window.addEventListener('storage', handleAuthTokenChange);
         
         // Remove the event listener when the component unmounts
         return () => window.removeEventListener('scroll', handleScroll);
