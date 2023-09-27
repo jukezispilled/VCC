@@ -60,9 +60,9 @@ const Employment = () => {
 
   return (
     <>
-      <div className="bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
+      <div className="bg-cover bg-[#ffffff] bg-fixed pb-[14%] xl:pb-[7%]">
         <div className="px-[10%] mx-[2%] pt-[27%] md:pt-[12%] xl:pt-[8%] text-xl">
-          <div className="xl:bg-[#eef0f7] h-min rounded-xl xl:shadow-md xl:p-10">
+          <div className="xl:bg-[#eef0f7] h-min rounded-xl xl:shadow-md xl:p-10 xl:border-2 border-slate-300">
             <div className="pb-4">
             <div className="text-4xl lg:text-5xl font-bold mb-7">Employment</div>
               Click&nbsp;
@@ -116,7 +116,7 @@ const Employment = () => {
                   onSubmit={handleSubmit}
                 >
                   {({ isSubmitting, setFieldValue }) => (
-                    <Form className="rounded-lg py-9" encType="multipart/form-data">
+                    <Form className="rounded-lg pt-9 pb-2" encType="multipart/form-data">
                       <div className="mb-4">
                         <label className="block font-medium mb-2" htmlFor="name">
                           Name*

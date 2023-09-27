@@ -26,8 +26,10 @@ const LoginForm = ({ setAuthToken }) => {
   });
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="w-100 xl:bg-[#f1f2f8] rounded-xl xl:p-14 xl:shadow-sm">
+    <div 
+      className="flex justify-center items-center h-screen bg-cover"
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/VCC1.png'})` }}>
+      <div className="w-100 xl:bg-[#ecf2ff] rounded-xl xl:p-14 xl:shadow-sm">
         <h2 className="text-4xl font-bold mb-6">Login</h2>
         <Formik
           initialValues={{ email: '', password: '' }}
@@ -37,34 +39,34 @@ const LoginForm = ({ setAuthToken }) => {
           {({ isSubmitting, errors, touched }) => (
             <Form className="space-y-3 text-xl">
               <div>
-                <label htmlFor="email" className="block">
+                <label htmlFor="email" className="block text-lg pb-2">
                   Email:
                 </label>
                 <Field
                   id="email"
                   type="email"
                   name="email"
-                  placeholder="Email*"
-                  className="w-full px-4 py-2 rounded appearance-none border-2 border-gray-200 bg-white"
+                  placeholder="Email"
+                  className="w-full px-4 py-2 rounded-lg appearance-none border-2 border-gray-200 bg-white"
                 />
                 <ErrorMessage name="email" component="p" className="text-red-500" />
               </div>
               <div>
-                <label htmlFor="password" className="block">
+                <label htmlFor="password" className="block text-lg pb-2">
                   Password:
                 </label>
                 <Field
                   id="password"
                   type="password"
                   name="password"
-                  placeholder="Password*"
-                  className="w-full px-4 py-2 mb-3 rounded appearance-none border-2 border-gray-200 bg-white"
+                  placeholder="Password"
+                  className="w-full px-4 py-2 mb-3 rounded-lg appearance-none border-2 border-gray-200 bg-white"
                 />
                 <ErrorMessage name="password" component="p" className="text-red-500" />
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#234d91] text-white px-4 py-2 rounded transition ease-in-out duration-500 font-semibold"
+                className="w-full bg-[#234d91] text-white px-4 py-2 rounded-lg transition ease-in-out duration-500 font-semibold"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'Logging in...' : 'Login'}

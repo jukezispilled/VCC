@@ -30,7 +30,7 @@ export default function Navbar() {
             <nav className={`${onScroll ? '':'transition ease-in-out duration-500'} bg-[#ffffff] border border-b`}>
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
-                        <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                        <div className="flex items-center justify-between py-3 md:py-4 md:block">
                             <a href="/">
                                 <img className={`shrink w-25 h-16 sm:w-15 h-15 ${onScroll ? 'bf':'af'}`} src="/logo.png" alt="Workflow" />
                             </a>
@@ -89,7 +89,7 @@ export default function Navbar() {
                                     <a href="/contact">Contact</a>
                                 </li>
                                 <a href="/login">  
-                                    <button className="text-xl transition ease-in-out duration-500 hover:bg-blue-800 mx-2 mt-4 px-4 py-2 md:mt-0 rounded-lg font-semibold bg-[#234d91] text-white">
+                                    <button className="text-xl transition ease-in-out duration-500 mx-2 mt-4 px-4 py-1.5 md:mt-0 rounded-lg font-semibold bg-[#234d91] text-white">
                                         {isLoggedIn ? "Dashboard" : "Login"}
                                     </button>
                                 </a>

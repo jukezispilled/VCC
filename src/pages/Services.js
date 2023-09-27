@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Services() {
     return(
-        <div className="h-min pb-[25%] lg:pb-[10%] px-[12%] pt-[22%] md:pt-[10%] xl:pt-[8%] bg-cover bg-[#ffffffaa] bg-fixed">
+        <div className="h-min pb-[25%] lg:pb-[10%] px-[12%] pt-[22%] md:pt-[10%] xl:pt-[8%] bg-cover bg-white bg-fixed">
             <div className="text-5xl font-bold my-7 text-[#2f4e80]">Services</div>
             <div className="md:flex justify-start"> 
                 <div className="w-full grid md:grid-cols-3 gap-y-24 gap-x-8 md:pb-10 lg:pb-32">

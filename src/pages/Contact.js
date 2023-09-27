@@ -25,10 +25,10 @@ const Contact = () => {
   });
 
   return (
-    <div className="h-screen bg-cover bg-[#ffffff] bg-fixed pb-[10%]">
+    <div className="h-min bg-cover bg-[#ffffff] bg-fixed pb-[7%]">
         <div className="px-[10%] mx-[2%] pt-[27%] md:pt-[12%] xl:pt-[8%]">
-            <div className="xl:bg-[#eef0f7] h-min xl:shadow-md rounded-xl xl:p-10 pb-[10%]">
-            <div className="text-4xl lg:text-5xl font-bold mb-7">Contact</div>
+            <div className="xl:bg-[#eef0f7] h-min xl:shadow-md rounded-xl xl:p-10 pb-[7%] xl:border-2 border-slate-300">
+            <div className="text-4xl lg:text-5xl font-bold mb-7">Contact Us</div>
                 <div>
                     <Formik
                         initialValues={{
@@ -41,7 +41,7 @@ const Contact = () => {
                         onSubmit={handleSubmit}
                     >
                         {({ isSubmitting, errors, touched }) => (
-                            <Form className="rounded-lg mb-10 text-xl">
+                            <Form className="rounded-lg mb-2 text-xl">
                                 <div className="mb-4">
                                     <label className="block font-medium mb-2" htmlFor="name">
                                         Your Name*
