@@ -32,6 +32,7 @@
     "react-scripts": "",
     "react-spring": "",
     "react-transition-group": "",
+    "swiper": "^10.3.0",
     "web-vitals": "",
     "yup": ""
   },
