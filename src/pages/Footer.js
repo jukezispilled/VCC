@@ -12,9 +12,9 @@ export default function Footer() {
                             <p>Cicero, NY 13039</p>
                         </div>
                         <div className="pb-4 pl-4 flex flex-col space-y-0">
-                            <p>phone: 315-699-9277</p>
+                            <p>phone: <a href="tel:315-699-9277">315-699-9277</a></p>
                             <p>fax: 315-699-3906</p>
-                            <p>email: admin@vectorcorp.net</p>
+                            <p>email: <a href="mailto:admin@vectorcorp.net">admin@vectorcorp.net</a></p>
                         </div>
                     </div>
                     <div className="flex flex-col font-extrabold">
