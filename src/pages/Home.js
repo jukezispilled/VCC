@@ -32,27 +32,32 @@ export default function Home() {
         {
             id: 0,
             imag: "/proj1.jpg",
-            name: "Onondaga Pedestrian Bridge"
+            name: "Onondaga Pedestrian Bridge",
+            sectionId: "o-section"
         },
         {
             id: 1,
             imag: "/aq1.jpg",
-            name: "Camillus Aqueduct"
+            name: "Camillus Aqueduct",
+            sectionId: "aq-section"
         },
         {
             id: 2,
             imag: "/wpb.jpg",
-            name: "Whitney Point Bridge"
+            name: "Whitney Point Bridge",
+            sectionId: "w-section"
         },
         {
             id: 3,
             imag: "/jgb.jpg",
-            name: "John Glenn Boulevard"
+            name: "John Glenn Boulevard",
+            sectionId: "j-section"
         },
         {
             id: 4,
             imag: "/hoxie.jpg",
-            name: "Hoxie Gorge"
+            name: "Hoxie Gorge",
+            sectionId: "h-section"
         }
     ];      
     
@@ -80,8 +85,8 @@ export default function Home() {
                             <HorizontalTicker
                             duration={30000}
                             >
-                                {proj.map(({ id, imag, name }) => (
-                                    <a href="/projects" className="p-2 hover:scale-[101%] transition ease-in-out duration-500">
+                                {proj.map(({ id, imag, name, sectionId }) => (
+                                    <a href={`/projects#${sectionId}`} className="p-2 hover:scale-[101%] transition ease-in-out duration-500">
                                         <div className="box-wrapper box-wrapper--vertical" key={id}>
                                             <div className="box box--vertical">
                                                 <div className="relative">

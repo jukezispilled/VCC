@@ -5,21 +5,22 @@ export default function About() {
         <div className="h-max">
           <div className="md:flex space-y-5 md:space-y-0 md:space-x-20">
             <div className="relative w-full md:w-[55%]">
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-zinc-900 opacity-50 rounded-lg z-10 w-full h-[300px] md:h-[450px]"></div>
-              <div className="absolute inset-0 rounded-lg z-20">
-                <div className="h-full w-full flex justify-center">
-                  <div className="grid content-center text-center md:-mt-24 lg:-mt-8 xl:mt-0">
-                    <div className="text-blue-300 text-[45px] leading-none font-semibold px-[10%]">Heavy Highway and Bridge Construction</div>
-                    <div className="text-slate-300 text-xl font-semibold">Since 1963</div>
+            <div className="relative h-[300px] md:h-[450px] w-full overflow-hidden">
+              {/* Image */}
+              <div className="h-full w-full rounded-lg bg-cover relative" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/wpb.jpg'})` }}>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-zinc-900 opacity-50 rounded-lg"></div>
+                {/* Text */}
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="grid text-center">
+                    <div className="text-blue-300 text-[45px] md:text-[60px] leading-none font-semibold px-[10%] md:px-0">Heavy Highway and Bridge Construction</div>
+                    <div className="text-slate-300 text-xl md:text-2xl font-semibold">Since 1963</div>
                   </div>
                 </div>
               </div>
-              <div className="h-[300px] md:h-[450px] w-full rounded-lg bg-cover relative" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/wpb.jpg'})` }}>
-                {/* Image */}
-              </div>
             </div>
-            <div className="text-l w-full md:w-[45%] font-semibold text-[#2b4978]">
+            </div>
+            <div className="text-[17.5px] w-full md:w-[45%] font-semibold text-[#2b4978]">
               <p className="mb-7">Vector Construction, co-founded by Richard F. Anderson in 1963, is a family-owned company specializing in heavy highway construction.</p>
               <p className="mb-7">Vector’s headquarters and shop are located in Cicero, New York, and perform work throughout New York State. Vector focuses on bridge rehabilitation and replacement. Project contracts generally range from 100 thousand to 25 million dollars.</p>
               <p className="mb-7">With over 100 years of combined experience in office management and field supervision, and a large inventory of equipment and material resources, Vector is able to meet client’s satisfaction through project execution and delivery.</p>
